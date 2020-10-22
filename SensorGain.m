@@ -278,16 +278,18 @@ for run = 1:numruns
 
             bigxerrormat(run, Mindex, sindex) = norm((x/norm(x)) - (best_x_estimated/norm(best_x_estimated)),2);
             bigdeltaerrormat(run, Mindex, sindex) = norm(deltasmall - best_deltasmall_estimated) / norm(deltasmall);
-            biggainerrormat(run, Mindex, sindex) = norm(gain - gain_estimated) / norm(gain);
+            biggainerrormat(run, Mindex, sindex) = norm((gain/norm(gain)) - (gain_estimated/norm(gain_estimated)),2);
         end
     end
    avgbigxerrormat = avgbigxerrormat + squeeze(bigxerrormat(run,:,:));
    avgbigdeltaerrormat = avgbigdeltaerrormat + squeeze(bigdeltaerrormat(run,:,:)); 
+   avgbiggainerrormat = avgbiggainerrormat+ squeeze(biggainerrormat(run,:,:)); 
 end
 
 toc
 avgbigxerrormat = avgbigxerrormat/numruns;
 avgbigdeltaerrormat = avgbigdeltaerrormat/numruns;
+avgbiggainerrormat = avgbiggainerrormat/numruns;
 save('results_sensorgains.mat');
 % 
 figure();
@@ -295,6 +297,8 @@ avgbigxerrormat(avgbigxerrormat>1)=1;
 image(svals, Mvals, repmat(avgbigxerrormat, [1 1 3]));
 ylabel('M (number of measurements)');
 xlabel('s (number of non-zero entries)');
+colormap('gray');
+colorbar;
 % 
 % max_x_error = max(max(avgbigxerrormat))
 % min_x_error = min(min(avgbigxerrormat))
