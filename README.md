@@ -1,1 +1,1 @@
-# COMPRESSIVE SIGNAL RECOVERY UNDER SENSING MATRIX ERRORS COMBINED WITH UNKNOWN MEASUREMENT GAINS
+# Compressive Signal Recovery Under Sensing Matrix Errors Combined With Unknown Measurement Gain
