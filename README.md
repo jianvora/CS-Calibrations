@@ -6,6 +6,11 @@ The above is a module to blindly calibrate errors (both in the sensing matrix al
 
 Some parameters to better understand the above scripts:
 
-'
-N length of the signal to be acquired
-'
+`
+N - length of the signal to be acquired
+r - maximum frequency perturbation value in MRI acquisition
+noisefrac - fraction of noise in the measurements (for simulation purposes)
+r_gain - maximum gain perturbation
+numdeltas - number of unique frequency perturbation parameters
+numgains - numer of unique gain perturbation parameters
+`
