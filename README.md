@@ -6,6 +6,6 @@ The above is a module to blindly calibrate errors (both in the sensing matrix al
 
 Some parameters to better understand the above scripts:
 
-'''
+''
 N length of the signal to be acquired
-'''
+''
