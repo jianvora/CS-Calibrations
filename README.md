@@ -29,3 +29,23 @@ numdeltas - number of unique frequency perturbation parameters
 `
 numgains - numer of unique gain perturbation parameters
 `
+
+`
+MVals - array containing measurement values
+`
+
+`
+SVals - array containing sparsity values
+`
+
+The above scripts will generate the plots as shown in the paper with each block showing the normalized error between the true and recovered signal. If you find this work useful, feel free to use the following citation for the same -
+
+``
+@INPROCEEDINGS{9413470,  
+author={Vora, Jian and Rajwade, Ajit},  
+booktitle={ICASSP 2021 - 2021 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},   
+title={Compressive Signal Recovery Under Sensing Matrix Errors Combined With Unknown Measurement Gains},   
+year={2021}, 
+pages={5105-5109},  
+doi={10.1109/ICASSP39728.2021.9413470}}
+``
