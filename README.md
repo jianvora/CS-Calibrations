@@ -2,6 +2,10 @@
 
 Code for our ICASSP 2021 paper which can be found [here](https://ieeexplore.ieee.org/abstract/document/9413470)
 
+<div align="center">
+  <img src="_assets/img.png" width="100%">
+</div>
+
 The above is a module to blindly calibrate errors (both in the sensing matrix along with multiplicative gains) during compressive signal acquisition. SensorGain.m is the script for canonical sparsity while ObjectPose.m when the signal is sparse in the Haar Wavelet basis.
 
 Some parameters to better understand the above scripts:
